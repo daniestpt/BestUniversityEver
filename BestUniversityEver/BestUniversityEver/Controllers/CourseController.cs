@@ -7,23 +7,28 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BestUniversityEver.DAL;
+using BestUniversityEver.Hubs.Course;
 using BestUniversityEver.Models;
 using BestUniversityEver.Models.MetaData;
 using BestUniversityEver.Repository;
+using Microsoft.AspNet.SignalR;
 
 namespace BestUniversityEver.Controllers
 {
-    public class CourseController : Controller
+    public class CourseController : Controller 
     {
+        IHubContext<CourseHub> _chatHubContext;
+
         private IRepository<Course> repository = null;
         private bool Success = false;
         public CourseController()
         {
             this.repository = new Repository<Course>();
         }
-        public CourseController(IRepository<Course> repository)
+        public CourseController(IRepository<Course> repository, IHubContext<CourseHub> chatHubContext)
         {
             this.repository = repository;
+            this._chatHubContext = chatHubContext;
         }
 
         public JsonResult CourseList()
@@ -60,6 +65,10 @@ namespace BestUniversityEver.Controllers
                 };
                 repository.Insert(course);
                 Success = repository.Save();
+
+                //SignalR
+                //_ = _chatHubContext.Clients.All.AddCourse(course);
+
                 return new HttpStatusCodeResult(HttpStatusCode.Created);  // OK = 200
             }
             catch
@@ -113,6 +122,9 @@ namespace BestUniversityEver.Controllers
 
                 repository.Delete(Convert.ToInt32(CourseID));
                 Success = repository.Save();
+
+                //SignalR
+                //_ = _chatHubContext.Clients.All.RemoveCourse(int.Parse(CourseID));
 
                 return new HttpStatusCodeResult(HttpStatusCode.Created);  // OK = 200
             }
