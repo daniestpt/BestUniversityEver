@@ -1,0 +1,23 @@
+﻿<div><br />
+    <div class="panel panel-default">
+        <div class="panel-heading" ng-if="CourseID">Courses | Update Course</div>
+        <div class="panel-heading" ng-if="!CourseID">Courses | New Course</div>
+        <div><p style="text-align:center;color:red">{{message}}</p></div>
+        <table>
+            <tr>
+                <td class="control-label col-md-2"><b>Title</b></td>
+                <td>
+                    <input class="form-control" type="text" ng-required="true" ng-model="Title" placeholder="Title" />
+                </td>
+            </tr>                
+            <tr>
+                <td></td>
+                <td>
+                    <button id="submitButton" name="submitButton" class="btn btn-primary" ng-click="AddUpdateCourse()">Save</button>
+                    <a class="btn btn-warning" href="#/course">Cancel</a>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" ng-model="CourseID" />
+    </div>
+</div>

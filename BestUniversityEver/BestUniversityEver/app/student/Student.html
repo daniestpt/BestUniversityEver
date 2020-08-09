@@ -1,0 +1,35 @@
+﻿<div><br />
+    <div class="panel panel-default">
+        <div class="panel-heading" ng-if="StudentID">Students | Update Student</div>
+        <div class="panel-heading" ng-if="!StudentID">Students | New Student</div>
+        <div><p style="text-align:center;color:red">{{message}}</p></div>
+        <table>
+            <tr>
+                <td class="control-label col-md-2"><b>FirstName</b></td>
+                <td>
+                    <input class="form-control" type="text" ng-required="true" ng-model="FirstName" placeholder="FirstName" />
+                </td>
+            </tr>
+            <tr>
+                <td class="control-label col-md-2"><b>LastName</b></td>
+                <td>
+                    <input class="form-control" type="text" ng-model="LastName" placeholder="LastName" />
+                </td>
+            </tr>
+            <tr>
+                <td class="control-label col-md-2"><b>BirthDay</b></td>
+                <td>
+                    <input class="form-control" type="text" ng-model="BirthDay" placeholder="BirthDay" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="submitButton" name="submitButton" class="btn btn-primary" ng-click="AddUpdateStudent()">Save</button>
+                    <a class="btn btn-warning" href="#/student">Cancel</a>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" ng-model="StudentID" />
+    </div>
+</div>

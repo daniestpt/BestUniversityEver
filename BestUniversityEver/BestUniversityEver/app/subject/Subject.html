@@ -1,0 +1,29 @@
+﻿<div><br />
+    <div class="panel panel-default">
+        <div class="panel-heading" ng-if="SubjectID">Subjects | Update Subject</div>
+        <div class="panel-heading" ng-if="!SubjectID">Subjects | New Subject</div>
+        <div><p style="text-align:center;color:red">{{message}}</p></div>
+        <table>
+            <tr>
+                <td class="control-label col-md-2"><b>SubjectName</b></td>
+                <td>
+                    <input class="form-control" type="text" ng-required="true" ng-model="SubjectName" placeholder="SubjectName" />
+                </td>
+            </tr>            
+            <tr>
+                <td class="control-label col-md-2"><b>TeacherName</b></td>
+                <td>
+                    <input readonly="readonly" class="form-control" type="text" ng-model="TeacherName" placeholder="TeacherName" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="submitButton" name="submitButton" class="btn btn-primary" ng-click="AddUpdateSubject()">Save</button>
+                    <a class="btn btn-warning" href="#/subject">Cancel</a>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" ng-model="SubjectID" />
+    </div>
+</div>

@@ -83,8 +83,11 @@ C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUnivers
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.csprojAssemblyReference.cache
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.csproj.CoreCompileInputs.cache
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.csproj.CopyComplete
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.dll
 C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.pdb
+C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.Migrations.BaseMig.resources
+C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.csproj.GenerateResource.cache
+C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.Migrations.BaseMig2.resources
+C:\Users\Dani\Documents\GitHub\BestUniversityEver\BestUniversityEver\BestUniversityEver\obj\Debug\BestUniversityEver.csprojAssemblyReference.cache

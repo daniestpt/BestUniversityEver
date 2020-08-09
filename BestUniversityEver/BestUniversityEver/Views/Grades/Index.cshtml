@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BestUniversityEver.Models.Grade>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Enrollment.EnrollmentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradeValue)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Enrollment.EnrollmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradeValue)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GradeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GradeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GradeID })
+        </td>
+    </tr>
+}
+
+</table>

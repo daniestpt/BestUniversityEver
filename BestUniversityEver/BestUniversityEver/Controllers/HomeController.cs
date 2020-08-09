@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BestUniversityEver.Models;
+using BestUniversityEver.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,15 @@ namespace BestUniversityEver.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepository<Course> repository = null;
+        public HomeController()
+        {
+            this.repository = new Repository<Course>();
+        }
+        public HomeController(IRepository<Course> repository)
+        {
+            this.repository = repository;
+        }
         public ActionResult Index()
         {
             return View();

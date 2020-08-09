@@ -1,0 +1,59 @@
+﻿<div>
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-heading">Teachers | All</div>
+        <div class="panel-body">
+            <div class="input-group">
+                <a class="btn btn-primary" href="#/teacher/new" ng-click="newTeacher()"> New Teacher</a>
+                <input type="text" id="searchText" class="form-control pull-right" placeholder="Search for..." ng-model="search_txt">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                        <i class="text-muted glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div><!-- /input-group -->
+            <div><p style="text-align:center;color:red">{{message}}</p></div>
+            <div class="table table-responsive">
+                <table class="table table-striped">
+                    <thead style="background-color:#333;color:#fff">
+                        <tr>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>BirthDay</th>
+                            <th>Salary</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="teacher in teachers | filter:search_txt">
+                            <td>
+                                {{teacher.FirstName}}
+                            </td>
+                            <td>
+                                {{teacher.LastName}}
+                            </td>
+                            <td>
+                                {{teacher.BirthDay.slice(6, -2) | date: 'yyyy-MM-dd'}}
+                            </td>
+                            <td>
+                                {{teacher.Salary}}
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="#/teacher/{{teacher.TeacherID}}">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a id="deleteButton" name="submitForm" class="btn btn-danger"
+                                   ng-click="deleteTeacher(teacher.TeacherID)">
+                                    <i class="glyphicon glyphicon-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
